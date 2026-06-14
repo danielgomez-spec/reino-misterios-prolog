@@ -1,6 +1,5 @@
 @extends('layouts.game')
 @section('content')
-
 <div class="game-page battle-page">
     <div class="battle-stage-bg" id="battle-bg"></div>
 
@@ -97,9 +96,7 @@
         </div>
     </div>
 </div>
-
 @endsection
-
 @push('scripts')
 <script>
     const MODO               = '{{ $modo }}';
