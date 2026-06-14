@@ -1,9 +1,9 @@
 # ⚔ El Reino de los Misterios
 
-Materia: Lenguajes de Programación | Periodo: 2026-1 | Estado: Completado
+Materia: Lenguajes de Programación | Periodo: 2026-1 | Estado: Cursando
 
 ## Equipo de trabajo
-- [Tu Nombre](https://github.com/TU-USUARIO)
+- [Sebastian Gómez Villafuerte](https://github.com/danielgomez-spec)
 
 ## Capturas / Demo
 
