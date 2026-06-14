@@ -1,4 +1,4 @@
-# ⚔ El Reino de los Misterios
+# ⚔ Forja del Destino
 
 Materia: Lenguajes de Programación | Periodo: 2026-1 | Estado: Cursando
 
