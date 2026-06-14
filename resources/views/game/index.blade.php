@@ -218,8 +218,7 @@ $inventarios = [
     // Cerrar modal al presionar ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeCharacterModal();
-        }
+            closeCharacterModal(); }
     });
 </script>
 @endpush
