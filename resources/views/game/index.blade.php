@@ -169,8 +169,16 @@ $inventarios = [
     function openCharacterModal(characterName) {
         const modal = document.getElementById('characterModal');
         const char = PERSONAJES.find(p => p.nombre === characterName);
+        const avatarContainer = document.getElementById('modalCharAvatar');
         
         if (!char) return;
+        
+        const avatarClass = AVATARCLASES[characterName] || 'avatar-default';
+        avatarContainer.className = 'modal-avatar ' + avatarClass;
+        avatarContainer.innerHTML = `
+            <div class="avatar-sprite"></div>
+            <div class="avatar-shadow"></div>
+        `;
         
         // Actualizar información del personaje
         document.getElementById('modalCharName').textContent = characterName.toUpperCase();

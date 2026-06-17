@@ -67,8 +67,8 @@
     <!-- Contenido central -->
     <div class="intro-content">
         <div class="intro-logo">
-            <div class="logo-line1">⚔ FORJA DEL</div>
-            <div class="logo-line2">DESTINO</div>
+            <div class="logo-line1">⚔ EL REINO DE</div>
+            <div class="logo-line2">LOS M!STER!OS</div>
         </div>
 
         <a href="{{ route('game.index') }}" class="btn-play">
@@ -77,7 +77,7 @@
 
         <div class="intro-lore">
             <p>Las puertas del reino se abren ante ti.<br>
-            Elige tu camino. Forja tu legado.<br>
+            Elige tu camino y descubre los secretos ocultos.<br>
             <span class="lore-highlight">Solo el más valiente escribirá la historia.</span></p>
         </div>
     </div>
