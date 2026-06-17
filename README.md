@@ -19,7 +19,7 @@ Materia: Lenguajes de Programación | Periodo: 2026-1 | Estado: Cursando
 > Los datos se obtienen desde la base de conocimiento Prolog en tiempo real.
 
 ### 3. Inventario inline expandido
-![Inventario](docs\screenshots\03_inventario.png)
+![Inventario](C:\xampp\htdocs\laravel-prolog-rpg\docs\screenshots\03_inventario.png)
 > Al pulsar "Ver Inventario", el panel se despliega dentro de la misma carta
 > sin salir de la página. Muestra icono, nombre y estadística de cada ítem
 > (DMG para armas, DEF para defensas, XP para soportes).
