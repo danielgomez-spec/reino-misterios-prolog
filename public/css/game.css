@@ -338,9 +338,9 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     margin: 0 auto;
 }
 .char-card {
-    background: #0e0e22;
+    background: linear-gradient(180deg, #0f1028 0%, #0a0b18 100%);
     border: 2px solid var(--border);
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -348,17 +348,19 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     transition: all 0.25s;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 10px 24px rgba(0,0,0,0.28);
 }
 .char-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(240,192,64,0.03) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(240,192,64,0.05) 0%, transparent 62%);
+    pointer-events: none;
 }
 .char-card:hover {
     border-color: var(--gold);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(240,192,64,0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 14px 32px rgba(240,192,64,0.12);
 }
 
 /* ── Avatares SVG pixel-art ── */
@@ -367,24 +369,33 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 96px;
 }
 .char-avatar {
-    width: 80px;
-    height: 80px;
+    width: 84px;
+    height: 84px;
     flex-shrink: 0;
-    border-radius: 4px;
-    overflow: hidden;
+    border-radius: 6px;
+    overflow: visible;
     position: relative;
     border: 2px solid var(--border);
     margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(180deg, #241336 0%, #11111e 80%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 0 18px rgba(0,0,0,0.35);
 }
 .avatar-sprite {
+    position: relative;
     width: 100%;
     height: 100%;
+    display: block;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
     image-rendering: pixelated;
+    z-index: 1;
 }
 /* Avatares usando CSS pixel-art con box-shadow */
 .avatar-elara    { background: #1a0a2a; }
@@ -401,7 +412,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #f0c040, 8px 2px #f0c040, 12px 2px #f0c040,
         0px 6px #f0c040, 4px 6px #e8d5a3, 8px 6px #e8d5a3, 12px 6px #f0c040, 16px 6px #f0c040,
@@ -418,7 +434,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #8B4513, 8px 2px #8B4513, 12px 2px #8B4513,
         4px 6px #e8d5a3, 8px 6px #e8d5a3, 12px 6px #e8d5a3,
@@ -435,7 +456,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #9b59b6, 8px 2px #9b59b6, 12px 2px #9b59b6,
         0px 6px #9b59b6, 4px 6px #e8d5a3, 8px 6px #e8d5a3, 12px 6px #e8d5a3, 16px 6px #9b59b6,
@@ -451,7 +477,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #8B4513, 8px 2px #8B4513, 12px 2px #8B4513,
         0px 6px #8B4513, 4px 6px #e8b870, 8px 6px #e8b870, 12px 6px #e8b870, 16px 6px #8B4513,
@@ -468,7 +499,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #2c1810, 8px 2px #2c1810, 12px 2px #2c1810,
         4px 6px #e8c9a0, 8px 6px #e8c9a0, 12px 6px #e8c9a0,
@@ -485,7 +521,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 4px;
     height: 4px;
     background: transparent;
-    margin: 6px auto 0;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     box-shadow:
         4px 2px #555, 8px 2px #555, 12px 2px #555,
         4px 6px #ccc, 8px 6px #ccc, 12px 6px #ccc,
@@ -499,20 +540,28 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
 
 .avatar-shadow {
     position: absolute;
-    bottom: 4px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 70%;
+    max-width: 58px;
     height: 6px;
-    background: rgba(0,0,0,0.4);
+    background: radial-gradient(circle, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.18) 70%, transparent 100%);
     border-radius: 50%;
+    z-index: 0;
 }
-.char-info { flex: 1; }
+.char-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .char-name {
     font-family: 'Press Start 2P', monospace;
     font-size: 9px;
     color: var(--gold);
     margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 .char-stats { display: flex; gap: 8px; margin-bottom: 8px; }
 .stat-badge {
@@ -561,11 +610,12 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     cursor: pointer;
     transition: all 0.2s;
     text-decoration: none;
+    font-weight: 600;
 }
 .btn-inv { background: #1a1a2e; color: var(--text); }
-.btn-inv:hover { border-color: var(--gold); color: var(--gold); }
+.btn-inv:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
 .btn-fight { background: #2a0a0a; color: #e74c3c; border-color: #c0392b; }
-.btn-fight:hover { background: #c0392b; color: #fff; }
+.btn-fight:hover { background: #c0392b; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(192,57,43,0.22); }
 .page-actions {
     padding: 24px;
     text-align: center;
@@ -763,9 +813,9 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     gap: 12px;
 }
 .hero-select-card {
-    background: #0e0e22;
+    background: linear-gradient(180deg, #11112a 0%, #0b0b18 100%);
     border: 2px solid var(--border);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 12px 8px;
     text-align: center;
     cursor: pointer;
@@ -775,8 +825,9 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 18px rgba(0,0,0,0.25);
 }
-.hero-select-card:hover { border-color: var(--gold); }
+.hero-select-card:hover { border-color: var(--gold); transform: translateY(-1px); }
 .hero-select-card.selected {
     border-color: var(--green);
     background: #0a1a0a;
@@ -785,12 +836,15 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     width: 56px;
     height: 56px;
     margin: 0 auto 8px;
-    border-radius: 4px;
-    overflow: hidden;
+    border-radius: 5px;
+    overflow: visible;
     border: 1px solid var(--border);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    position: relative;
+    background: linear-gradient(180deg, #241336 0%, #11111e 80%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 0 10px rgba(0,0,0,0.3);
 }
 .hero-mini-name {
     font-family: 'Press Start 2P', monospace;
@@ -998,17 +1052,24 @@ body.page-exit { opacity: 0; transform: translateY(-10px); transition: all 0.3s 
     text-align: center;
     margin-bottom: 12px;
     padding: 12px;
-    background: rgba(255,255,255,0.02);
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 16px rgba(0,0,0,0.18);
 }
 .battle-avatar {
-    width: 72px;
-    height: 72px;
+    width: 82px;
+    height: 82px;
     margin: 0 auto 8px;
-    border-radius: 4px;
-    overflow: hidden;
+    border-radius: 6px;
+    overflow: visible;
     border: 2px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(180deg, #241336 0%, #11111e 80%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0 0 18px rgba(0,0,0,0.4);
 }
 .battle-avatar.fighting { animation: battleIdle 1.5s ease-in-out infinite; }
 @keyframes battleIdle {
@@ -1380,9 +1441,9 @@ a,
 .modal-content {
     position: relative;
     z-index: 1001;
-    background: #0c0c20;
+    background: linear-gradient(180deg, #0d1023 0%, #0a0b18 100%);
     border: 3px solid var(--gold);
-    border-radius: 8px;
+    border-radius: 10px;
     max-width: 700px;
     width: 100%;
     max-height: 85vh;
@@ -1498,18 +1559,22 @@ a,
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .modal-avatar {
-    width: 140px;
-    height: 140px;
+    width: min(180px, 100%);
+    aspect-ratio: 1 / 1;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid var(--gold);
-    overflow: hidden;
-    background: #1a1a2e;
+    overflow: visible;
     position: relative;
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: radial-gradient(circle at 30% 20%, #3a2060 0%, #1c1534 46%, #101020 100%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), 0 0 24px rgba(240,192,64,0.08);
 }
 
 .modal-main-stats {
